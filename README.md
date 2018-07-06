@@ -3,7 +3,7 @@
 ## instructions
 * Install terraform
 * Install azure cli
-* Create environment variables
+* Create a file `$ touch environment.sh` with the following content
 ```
 export ARM_SUBSCRIPTION_ID=xxxxxxxxxxx
 export ARM_CLIENT_ID=xxxxxxxxxxx
