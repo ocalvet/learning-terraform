@@ -136,15 +136,14 @@ resource "azurerm_virtual_machine" "testing_vm" {
 
   os_profile {
     computer_name  = "testingVM"
-    admin_username = "admin"
-    admin_password = "admin.azure"
+    admin_username = "azureuser"
   }
 
   os_profile_linux_config {
-    disable_password_authentication = false
+    disable_password_authentication = true
 
     ssh_keys {
-      path     = "/home/admin/.ssh/authorized_keys"
+      path     = "/home/azureuser/.ssh/authorized_keys"
       key_data = "ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQDNJXOspJHO/HMVOOppagCgtI7hXrV/Q8tYD8X8AXnUs+kdKzh9PixsDkr+mvOF6TIpt5HZRiFzQDYeij5EybUuxzuIIYWZ20uE45uWpnkc58nhGbbIRsNixgzjC+sKFnh1J2cW5MErHPKoihJpx4BQXdA397c39MIhkTa4tlmJTNqotLbLzA9FESavJz1UKeB1QH6clnD832Az0gCdNt//aiFBhR3a5LkItAoMxjda6s6n8JJwwFz8BXPzB7bPNLh6uiwfncvgzLLj7xW2HfVuov6png3h9LNabeaFFnMXI/oF3Bz6oe1JJeNHBFuquof529cqm0u6tP6+e9FYhjqt"
     }
   }
