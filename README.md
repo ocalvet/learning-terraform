@@ -1,8 +1,11 @@
 # Terraform Learning
 
 ## instructions
-* Install terraform
-* Install azure cli
+### Dependencies
+* Install [terraform](https://www.terraform.io/)
+* Install [azure cli](https://docs.microsoft.com/en-us/cli/azure/install-azure-cli?view=azure-cli-latest)
+
+### Setup
 * Create a file `$ touch environment.sh` with the following content
 ```
 export ARM_SUBSCRIPTION_ID=xxxxxxxxxxx
